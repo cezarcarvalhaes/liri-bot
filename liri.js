@@ -8,7 +8,8 @@ var keys = require("./keys.js");
 //These hold our sensitive API keys and tokens
 var spotify = new Spotify(keys.spotify);
 var client = new Twitter(keys.twitter);
-
+var twitterId = 3422591799;
+var twitPath = 'https://api.twitter.com/1.1/statuses/show.json?id='
 //These hold user arguments
 var command = process.argv[2];
 var queryArr = [];
@@ -26,6 +27,7 @@ console.log(input);
 //Executes depending on command
 if (command === 'my-tweets') {
     console.log('tweet tweet')
+    tweetTweet();
 }
 else if (command === 'spotify-this-song') {
     console.log('spotify')
@@ -40,9 +42,22 @@ else if (command === 'do-what-it-says') {
 }
 else { console.log("I don't understand that command") }
 
+//Twitter function
+
+function tweetTweet(){
+    var params = {screen_name: 'eclecticbromest'};
+    client.get('statuses/user_timeline', params, function(error, tweets, response) {
+  if (!error) {
+    for (i = 0; i < tweets.length; i++){
+        console.log([i+1]+': Tweet: '+ tweets[i].text);
+        console.log('Timestamp: '+ tweets[i].created_at)
+    };
+  }
+});
+}
+
 //spotify-this-song function
 function thisSong(){
-spotify
 spotify.search({ type: 'track', query: input, limit: 1, market: 'US'}, function(err, data) {
     if (err) {
       return console.log('Error occurred: ' + err);
