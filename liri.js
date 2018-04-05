@@ -1,15 +1,16 @@
 require("dotenv").config();
 
 var request = require("request");
-
-var keys = require('./keys');
+var Spotify = require('node-spotify-api');
+var Twitter = require('twitter');
+var keys = require("./keys.js");
 
 //These hold our sensitive API keys and tokens
-// var spotify = new Spotify(keys.spotify);
-// var client = new Twitter(keys.twitter);
+var spotify = new Spotify(keys.spotify);
+var client = new Twitter(keys.twitter);
 
+//These hold user arguments
 var command = process.argv[2];
-
 var queryArr = [];
 
 //For loops pushes song/movie names into queryArr
@@ -28,6 +29,7 @@ if (command === 'my-tweets') {
 }
 else if (command === 'spotify-this-song') {
     console.log('spotify')
+    thisSong();
 }
 else if (command === 'movie-this') {
     console.log('movies')
@@ -38,7 +40,20 @@ else if (command === 'do-what-it-says') {
 }
 else { console.log("I don't understand that command") }
 
+//spotify-this-song function
+function thisSong(){
+spotify
+spotify.search({ type: 'track', query: input, limit: 1, market: 'US'}, function(err, data) {
+    if (err) {
+      return console.log('Error occurred: ' + err);
+    }
 
+  console.log('Artist: ' + data.tracks.items[0].album.artists[0].name);
+  console.log('Title: ' + data.tracks.items[0].name);
+  console.log('Preview: ' + data.tracks.items[0].external_urls.spotify);
+  console.log('Album Name: ' + data.tracks.items[0].album.name);
+  });
+}
 
 
 //movie-this function
