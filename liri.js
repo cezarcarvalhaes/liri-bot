@@ -41,6 +41,10 @@ else if (command === 'do-what-it-says') {
 }
 else { console.log("I don't understand that command") }
 
+//logs commands to log.txt
+logData();
+
+
 //Twitter function
 
 function tweetTweet() {
@@ -112,4 +116,21 @@ function doSay() {
         input = dataArr[1];
         thisSong();
     })
+}
+
+function logData() {
+    if (input){
+        fs.appendFile("log.txt", command + ": " + input + ", ", function(err) {
+            if (err) {
+              return console.log(err);
+            }
+          });
+    }
+    else {
+    fs.appendFile("log.txt", command + ", ", function(err) {
+        if (err) {
+          return console.log(err);
+        }
+      });
+    }
 }
