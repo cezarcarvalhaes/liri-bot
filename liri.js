@@ -41,19 +41,21 @@ else if (command === 'do-what-it-says') {
 }
 else { console.log("I don't understand that command") }
 
-//logs commands to log.txt
-logData();
-
-
 //Twitter function
 
 function tweetTweet() {
     var params = { screen_name: 'eclecticbromest' };
     client.get('statuses/user_timeline', params, function (error, tweets, response) {
         if (!error) {
+            logCommand();
+            var tweetData;
+            console.log(tweets.length)
             for (i = 0; i < tweets.length; i++) {
-                console.log([i + 1] + ': Tweet: ' + tweets[i].text);
-                console.log('Timestamp: ' + tweets[i].created_at)
+                tweetData = `
+                ${[i + 1]}) ${tweets[i].text}
+                Timestamp: ${tweets[i].created_at}`
+                console.log(tweetData)
+                logData(tweetData);
             };
         }
     });
@@ -66,10 +68,15 @@ function thisSong() {
             return console.log('Error occurred: ' + err);
         }
 
-        console.log('Artist: ' + data.tracks.items[0].album.artists[0].name);
-        console.log('Title: ' + data.tracks.items[0].name);
-        console.log('Preview: ' + data.tracks.items[0].external_urls.spotify);
-        console.log('Album Name: ' + data.tracks.items[0].album.name);
+        var text = `
+        Artist: ${data.tracks.items[0].album.artists[0].name};
+        Title: ${data.tracks.items[0].name};
+        Preview: ${data.tracks.items[0].external_urls.spotify};
+        Album Name: ${data.tracks.items[0].album.name}`;
+
+        console.log(text);
+        logCommand();
+        logData(text);
     });
 }
 
@@ -85,21 +92,30 @@ function movies() {
             // If the request is successful
             if (!error && response.statusCode === 200) {
 
-                console.log("Title: " + JSON.parse(body).Title);
-                console.log("Year: " + JSON.parse(body).Year);
-                console.log("IMDB Rating: " + JSON.parse(body).Ratings[0].Value);
-                console.log("Rotten Tomatoes Rating: " + JSON.parse(body).Ratings[1].Value);
-                console.log("Country: " + JSON.parse(body).Country);
-                console.log("Language: " + JSON.parse(body).Language);
-                console.log("Plot: " + JSON.parse(body).Plot);
-                console.log("Actors: " + JSON.parse(body).Actors);
+                var text = `
+                Title: ${JSON.parse(body).Title}
+                Year: ${JSON.parse(body).Year}
+                IMDB Rating: ${JSON.parse(body).Ratings[0].Value}
+                Rotten Tomatoes Rating: ${JSON.parse(body).Ratings[1].Value}
+                Country: ${JSON.parse(body).Country}
+                Language: ${JSON.parse(body).Language}
+                Plot: ${JSON.parse(body).Plot}
+                Actors: ${JSON.parse(body).Actors}`;
+
+                console.log(text);
+                logCommand();
+                logData(text);
+
             }
         });
 
     }
     else {
-        console.log("If you haven't watched 'Mr. Nobody,' then you should: http://www.imdb.com/title/tt0485947/")
-        console.log("It's on Netflix!")
+        var text = `
+        If you haven't watched "Mr. Nobody," then you should: http://www.imdb.com/title/tt0485947/
+        It's on Netflix!`;
+        logCommand();
+        logData(text);
     }
 }
 
@@ -118,19 +134,36 @@ function doSay() {
     })
 }
 
-function logData() {
-    if (input){
-        fs.appendFile("log.txt", command + ": " + input + ", ", function(err) {
+function logCommand() {
+    if (input) {
+        var text = `
+
+        ${command}: ${input}-
+        `
+        fs.appendFile("log.txt", text, function (err) {
             if (err) {
-              return console.log(err);
+                return console.log(err);
             }
-          });
+        });
     }
     else {
-    fs.appendFile("log.txt", command + ", ", function(err) {
-        if (err) {
-          return console.log(err);
-        }
-      });
+        var text2 = `
+        ${command}: 
+        
+        `
+        fs.appendFile("log.txt", command + ": ", function (err) {
+            if (err) {
+                return console.log(err);
+            }
+        });
     }
+}
+
+function logData(info) {
+    fs.appendFile("log.txt", info, function (err) {
+        if (err) {
+            return console.log(err);
+        }
+    });
+
 }
