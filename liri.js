@@ -10,8 +10,7 @@ var fs = require("fs")
 //These hold our sensitive API keys and tokens
 var spotify = new Spotify(keys.spotify);
 var client = new Twitter(keys.twitter);
-var twitterId = 3422591799;
-var twitPath = 'https://api.twitter.com/1.1/statuses/show.json?id='
+
 //These hold user arguments
 var command = process.argv[2];
 var queryArr = [];
