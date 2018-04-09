@@ -105,7 +105,6 @@ function movies() {
                 console.log(text);
                 logCommand();
                 logData(text);
-
             }
         });
 
