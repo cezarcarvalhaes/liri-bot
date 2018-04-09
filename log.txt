@@ -1,23 +1,93 @@
 
 
-        movie-this: fight+club-
+        movie-this: zoolander-
         
-                Title: Fight Club
-                Year: 1999
-                IMDB Rating: 8.8/10
-                Rotten Tomatoes Rating: 79%
-                Country: USA, Germany
+                Title: Zoolander
+                Year: 2001
+                IMDB Rating: 6.6/10
+                Rotten Tomatoes Rating: 64%
+                Country: Germany, USA
                 Language: English
-                Plot: An insomniac office worker, looking for a way to change his life, crosses paths with a devil-may-care soapmaker, forming an underground fight club that evolves into something much, much more.
-                Actors: Edward Norton, Brad Pitt, Meat Loaf, Zach Grenier
+                Plot: At the end of his career, a clueless fashion model is brainwashed to kill the Prime Minister of Malaysia.
+                Actors: Ben Stiller, Owen Wilson, Christine Taylor, Will Ferrell
+                
+                
 
-        movie-this: fight+club-
+        spotify-this-song: jumper-
         
-                Title: Fight Club
-                Year: 1999
-                IMDB Rating: 8.8/10
-                Rotten Tomatoes Rating: 79%
-                Country: USA, Germany
-                Language: English
-                Plot: An insomniac office worker, looking for a way to change his life, crosses paths with a devil-may-care soapmaker, forming an underground fight club that evolves into something much, much more.
-                Actors: Edward Norton, Brad Pitt, Meat Loaf, Zach Grenier
+        Artist: Third Eye Blind;
+        Title: Jumper - 1998 Edit;
+        Preview: https://open.spotify.com/track/3354J49VpkbZJho7Ztdzpw;
+        Album Name: Third Eye Blind
+        
+        my-tweets: 
+                1) Today's #woodworking #project a #diy #farmhouse bench. No help from my assistant though...#doglife https://t.co/MMomDi7ekM
+                Timestamp: Sun Apr 03 15:06:14 +0000 2016
+                
+                2) Thinking of brewing your own beer? Read this first: https://t.co/88K9YF5EYE. https://t.co/e2VkpBAqC9
+                Timestamp: Fri Apr 01 03:10:23 +0000 2016
+                
+                3) I've been schooling myself in #responsivedesign and made some updates to website, making it  more mobile friendly! https://t.co/p4JyI9HHIw
+                Timestamp: Tue Mar 29 19:20:32 +0000 2016
+                
+                4) Evening #run by the #jamesriver . #trailrunning https://t.co/4lpO5JywiK
+                Timestamp: Tue Mar 29 00:02:56 +0000 2016
+                
+                5) Sometimes I wish I could text my dog, like, "be home soon buddy!"
+                Timestamp: Sat Mar 26 03:36:58 +0000 2016
+                
+                6) RT @brandnewrock: .@ProcrastinateMT’s first LP of 2016 is from @greaterpyrenees. For more info and music: https://t.co/PKGFAr3nFF https://t…
+                Timestamp: Tue Mar 15 01:52:46 +0000 2016
+                
+                7) Been playing with some #Thai inspired #recipes. Check out this #proteinpacked recipe! https://t.co/VnPvc1zLHH https://t.co/ErfC5O3C15
+                Timestamp: Mon Mar 14 00:15:35 +0000 2016
+                
+                8) Gravity sparge! #homebrewing #beer #brewday https://t.co/f7QU2sgaAq
+                Timestamp: Sun Mar 13 23:02:02 +0000 2016
+                
+                9) Today's #workoutpartner #justrun #sprints #tgif @ Richmond, Virginia https://t.co/xums8v9dvR
+                Timestamp: Fri Mar 11 20:00:29 +0000 2016
+                
+                10) Happy Women's Day!
+                Timestamp: Tue Mar 08 15:30:31 +0000 2016
+                
+                11) Finally, the DIY Farmhouse table post I've been promising: https://t.co/kW5Sg0MhZK https://t.co/7lUUwGHQci
+                Timestamp: Mon Mar 07 03:00:34 +0000 2016
+                
+                12) RT @beardedbros: What is your favorite #PlantBased recipe? These #Vegan #BBQ recipes on @buzzfeed are making us drool! https://t.co/nqJxk8J…
+                Timestamp: Thu Mar 03 04:22:30 +0000 2016
+                
+                13) Going for #superstrength this #SuperTuesday ! But seriously, #getoutandvote 🇺🇸 !! https://t.co/n3q6iFZuPN
+                Timestamp: Tue Mar 01 21:59:03 +0000 2016
+                
+                14) Coming soon to https://t.co/ZEBtC72kt5: A step-by-step guide to build your very own farmhouse table for under $100! https://t.co/PERP3zLAdW
+                Timestamp: Tue Mar 01 03:44:15 +0000 2016
+                
+                15) RT @LailaSbeinati: Crispy Sweet Potato Fries with an Avocado Dill Dip. 👌🏻 #dairyfree #eggfree #nutfree #vegan #nodairynocry https://t.co/Qe…
+                Timestamp: Tue Mar 01 01:06:21 +0000 2016
+                
+                16) @Tweets4Vegans Thanks for the Retweet earlier! Find the full recipe at: https://t.co/qqQZgTtAp3
+                Timestamp: Mon Feb 29 13:44:56 +0000 2016
+                
+                17) Finished product: Edamame spaghetti with vegetables in peanut sauce. Literally took 15 minutes… https://t.co/z7Yik6nAYm
+                Timestamp: Mon Feb 29 00:37:51 +0000 2016
+                
+                18) Edamame spaghetti with vegetables and peanut sauce in the works! #dinner #vegan #vegetarian… https://t.co/oWKclpzDbS
+                Timestamp: Mon Feb 29 00:02:07 +0000 2016
+                
+                19) New Post! Check it out and please share!
+https://t.co/lfmBFLfma5 https://t.co/Hq4tEw2jqA
+                Timestamp: Sun Feb 28 20:56:31 +0000 2016
+                
+                20) #keeppounding https://t.co/HbPBUWQ6BC
+                Timestamp: Wed Feb 24 20:38:09 +0000 2016
+                
+
+        spotify-this-song: "I Want it That Way"-
+        
+        Artist: Backstreet Boys;
+        Title: I Want It That Way;
+        Preview: https://open.spotify.com/track/6e40mgJiCid5HRAGrbpGA6;
+        Album Name: The Hits--Chapter One
+        
+        

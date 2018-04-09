@@ -52,7 +52,8 @@ function tweetTweet() {
             for (i = 0; i < tweets.length; i++) {
                 tweetData = `
                 ${[i + 1]}) ${tweets[i].text}
-                Timestamp: ${tweets[i].created_at}`
+                Timestamp: ${tweets[i].created_at}
+                `
                 console.log(tweetData)
                 logData(tweetData);
             };
@@ -62,21 +63,28 @@ function tweetTweet() {
 
 //spotify-this-song function
 function thisSong() {
-    spotify.search({ type: 'track', query: input, limit: 1, market: 'US' }, function (err, data) {
-        if (err) {
-            return console.log('Error occurred: ' + err);
-        }
+    if (input) {
+        spotify.search({ type: 'track', query: input, limit: 1, market: 'US' }, function (err, data) {
+            if (err) {
+                return console.log('Error occurred: ' + err);
+            }
 
-        var text = `
+            var text = `
         Artist: ${data.tracks.items[0].album.artists[0].name};
         Title: ${data.tracks.items[0].name};
         Preview: ${data.tracks.items[0].external_urls.spotify};
-        Album Name: ${data.tracks.items[0].album.name}`;
+        Album Name: ${data.tracks.items[0].album.name}
+        
+        `;
 
-        console.log(text);
-        logCommand();
-        logData(text);
-    });
+            console.log(text);
+            logCommand();
+            logData(text);
+        });
+    }
+    else {
+        console.log("Please type in the name of a song after the command.")
+    }
 }
 
 
@@ -84,7 +92,6 @@ function thisSong() {
 function movies() {
     var omdbUrl = "http://www.omdbapi.com/?t=" + input + "&y=&plot=short&apikey=trilogy";
 
-    console.log(omdbUrl);
     if (input) {
         request(omdbUrl, function (error, response, body) {
 
@@ -99,7 +106,9 @@ function movies() {
                 Country: ${JSON.parse(body).Country}
                 Language: ${JSON.parse(body).Language}
                 Plot: ${JSON.parse(body).Plot}
-                Actors: ${JSON.parse(body).Actors}`;
+                Actors: ${JSON.parse(body).Actors}
+                
+                `;
 
                 console.log(text);
                 logCommand();
@@ -112,6 +121,7 @@ function movies() {
         var text = `
         If you haven't watched "Mr. Nobody," then you should: http://www.imdb.com/title/tt0485947/
         It's on Netflix!`;
+        console.log(text);
         logCommand();
         logData(text);
     }
