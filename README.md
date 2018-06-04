@@ -6,7 +6,7 @@ LIRI is a Language Interpretation and Recognition Interface. LIRI is be a comman
 
 Run 'npm install' to install node modules. 
 
-To run the app, type: **node liri.js {command} {input} ** in your command shell.
+To run the app, type: **node liri.js {command} {input}** in your command shell.
 
 **LIRI Commands:**
 
