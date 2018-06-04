@@ -6,15 +6,15 @@ LIRI is a Language Interpretation and Recognition Interface. LIRI is be a comman
 
 Run 'npm install' to install node modules. 
 
-To run the app, type: node liri.js [command] [input]in your command shell.
+To run the app, type: **node liri.js {command} {input} ** in your command shell.
 
 **LIRI Commands:**
 
 **'my-tweets'** Gives back you back the last 20 tweets for eclectic bromestic.
 
-**'spotify-this-song [your-song]':** Provides information about the requested song title from Spotify API.
+**'spotify-this-song {your-song}':** Provides information about the requested song title from Spotify API.
 
-**'movie-this [movie]'**: Provides information about the requested movie from the Open Movie Database API
+**'movie-this {movie}'**: Provides information about the requested movie from the Open Movie Database API
 
 **do-what-it-says**: pulls information from a random.txt file to provide one of the above commands.
 
